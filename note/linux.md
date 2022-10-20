@@ -5,3 +5,8 @@
 3. ls -l /etc/alternatices/java  指向/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
 4. ls -l /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java指向本身，即位java安装路径
 
+
+
+2. ubuntu:
+   1. sudo apt-get install vim安装软件
+   2. sudo apt-get remove vim-common  卸载
