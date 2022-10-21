@@ -1447,7 +1447,22 @@ pip install -r xxx.text: 安装包批量
 
     9. 
 
-20. 
+20. python web scraping爬虫:    requests  beautifulsoup4
+
+21. statistic analysis: numpy , 矩阵计算分析
+
+22. pandas: data structures and data analysis tools , 格式化数据
+
+23. python for web
+
+
+    1. flask
+    2. django
+    3. 
+
+24. Restful api
+
+
 
 
 
