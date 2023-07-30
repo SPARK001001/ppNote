@@ -19,7 +19,7 @@ git 是一种开源分布式版本控制系统，用于跟踪和管理代码的�
          如果在feature分支上执行git rebase develop，则Git会将feature分支的提交历史应用到develop分支的顶部
           D---E---F---G---A'---B'---C'  feature (rebased)
                             develop
-        
+          
         ```
 
       - 
@@ -36,7 +36,7 @@ git 是一种开源分布式版本控制系统，用于跟踪和管理代码的�
 
 - 回滚和版本回退：
 
-  - 回滚： git revert，指撤销最近一次的提交。 例如提交A,B,C, D，执行git revert D会创建一个新的提交，撤销D引入的修改，代码库回滚到提交C的状态
+  - 回滚： git revert，指撤销某次提交。 例如提交A,B,C, D，执行git revert D会**创建一个新的提交**，撤销D引入的修改，代码库回滚到提交C的状态。保留历史的提交记录
   - 版本回退： git reset, 将Head指针和分支指针移动到指定的提交，版本回退会丢失回退点之后的提交历史。git reset --hard B 将回退到B的状态。不会新建分支。
 
 - 标签管理

@@ -3,6 +3,7 @@
 `find` 是一个在 Unix 和 Linux 系统中常用的命令行工具，用于在文件系统中搜索文件和目录。`find` 命令可以通过多种条件和选项来查找满足特定条件的文件或目录。
 
 **基本语法：**
+
 ```
 find [path] [expression]
 ```
@@ -11,42 +12,51 @@ find [path] [expression]
 - `expression` 是用于指定搜索条件的表达式。
 
 **使用示例：**
+
 1. 查找当前目录下的所有文件和目录：
+
    ```
    find
    ```
 
 2. 查找指定路径下的所有文件和目录：
+
    ```
    find /path/to/directory
    ```
 
 3. 查找指定路径下的所有后缀为 `.txt` 的文件：
+
    ```
    find /path/to/directory -name "*.txt"
    ```
 
 4. 查找当前目录及其子目录下所有后缀为 `.png` 的图片文件：
+
    ```
    find . -name "*.png"
    ```
 
 5. 查找当前目录及其子目录下大于 1MB 大小的文件：
+
    ```
    find . -type f -size +1M
    ```
 
 6. 查找当前目录及其子目录下最近 7 天内修改过的文件：
+
    ```
    find . -type f -mtime -7
    ```
 
 7. 查找当前目录及其子目录下所有目录：
+
    ```
    find . -type d
    ```
 
 8. 查找当前目录及其子目录下所有空目录：
+
    ```
    find . -type d -empty
    ```
@@ -60,42 +70,51 @@ find [path] [expression]
 `lsof` 是一个在 Unix 和 Linux 系统中常用的命令行工具，用于查看当前系统中打开的文件和网络连接情况。`lsof` 可以显示被打开的文件、文件描述符、网络连接、目录、设备等信息，对于查找进程打开的文件和查看网络连接非常有用。
 
 **基本语法：**
+
 ```
 lsof [options]
 ```
 
 **使用示例：**
+
 1. 查看当前系统中所有打开的文件和网络连接：
+
    ```
    lsof
    ```
 
 2. 查看指定进程打开的文件和网络连接（使用进程号）：
+
    ```
    lsof -p <pid>
    ```
 
 3. 查看指定用户打开的文件和网络连接：
+
    ```
    lsof -u <username>
    ```
 
 4. 查看指定文件被哪个进程打开：
+
    ```
    lsof /path/to/file
    ```
 
 5. 查看指定网络端口被哪个进程占用：
+
    ```
    lsof -i :<port>
    ```
 
 6. 查看所有网络连接情况：
+
    ```
    lsof -i
    ```
 
 7. 查看指定目录下被打开的文件：
+
    ```
    lsof +D /path/to/directory
    ```
@@ -107,39 +126,44 @@ lsof [options]
 `less` 是一个在 Unix 和 Linux 系统中常用的命令行工具，用于查看文本文件的内容。它类似于 `more` 命令，但提供更多的功能和交互性。
 
 **基本语法：**
+
 ```
 less [options] file
 ```
 
 **使用示例：**
+
 1. 查看文件的内容：
+
    ```
    less file.txt
    ```
 
 2. 向下滚动一行：
+
    - 按下方向键向下滚动一行。
    - 按空格键向下滚动一页。
    - 按 `Enter` 键向下滚动一行。
 
 3. 向上滚动一行：
+
    - 按上方向键向上滚动一行。
    - 按 `b` 键向上滚动一页。
 
 4. 跳转到文件开头：
-   
+
 - 按 `g` 键。
-   
+
 5. 跳转到文件结尾：
-   
+
 - 按 `G` 键。
-   
+
 6. 搜索文本：
    - 按 `/` 键，然后输入要搜索的文本，按 `Enter` 键进行搜索。
    - 按 `n` 键查找下一个匹配项，按 `N` 键查找上一个匹配项。
 
 7. 退出 `less` 命令：
-   
+
    - 按 `q` 键退出 `less`。
 
 `less` 命令允许用户在文件内容中浏览和搜索，它比 `more` 命令更灵活，并且支持向前和向后滚动文件内容。在使用 `less` 命令时，可以通过 `man less` 命令或查阅 `less` 的官方文档来了解更多选项和用法。
@@ -149,6 +173,7 @@ less [options] file
 SSH（Secure Shell）是一种网络协议，用于在不安全的网络中安全地进行远程登录和数据传输。通过 SSH，用户可以在远程服务器上执行命令、管理文件、传输数据等操作，而不必担心数据被截获或篡改。
 
 **SSH 的工作原理：**
+
 1. 服务端监听：SSH 服务端在服务器上监听特定的端口（默认为22），等待客户端连接。
 
 2. 客户端连接：客户端通过 SSH 客户端工具（如 OpenSSH）发起连接请求，提供服务器的 IP 地址和用户名。
@@ -174,37 +199,45 @@ SSH 还支持密钥认证，它使用公钥和私钥的方式进行身份验证�
 `head` 是一个常用的命令行工具，用于查看文件的开头内容。它在 Unix 和 Linux 系统中广泛使用，特别适用于查看日志文件和其他文本文件的开头部分。
 
 **基本语法：**
+
 ```
 head [options] file
 ```
 
 **使用示例：**
+
 1. 查看文件的开头 10 行内容：
+
    ```
    head file.txt
    ```
 
 2. 查看文件的开头 20 行内容：
+
    ```
    head -n 20 file.txt
    ```
 
 3. 查看文件的开头 50 字节内容：
+
    ```
    head -c 50 file.txt
    ```
 
 4. 查看多个文件的开头内容：
+
    ```
    head file1.txt file2.txt
    ```
 
 5. 查看多个文件的开头内容并合并显示：
+
    ```
    head -q file1.txt file2.txt
    ```
 
 6. 显示文件的前几个字段：
+
    ```
    head -n 10 file.txt | cut -d ' ' -f 1
    ```
@@ -216,42 +249,51 @@ head [options] file
 `tail` 是一个常用的命令行工具，用于查看文件的末尾内容。它在 Unix 和 Linux 系统中广泛使用，特别适用于查看日志文件和其他不断增长的文本文件。
 
 **基本语法：**
+
 ```
 tail [options] file
 ```
 
 **使用示例：**
+
 1. 查看文件的末尾 10 行内容：
+
    ```
    tail file.txt
    ```
 
 2. 查看文件的末尾 20 行内容：
+
    ```
    tail -n 20 file.txt
    ```
 
 3. 实时监控文件的新增内容（不断刷新显示新的行）：
+
    ```
    tail -f file.txt
    ```
 
 4. 查看文件的末尾 50 字节内容：
+
    ```
    tail -c 50 file.txt
    ```
 
 5. 查看多个文件的末尾内容：
+
    ```
    tail file1.txt file2.txt
    ```
 
 6. 查看多个文件的末尾内容并合并显示：
+
    ```
    tail -q file1.txt file2.txt
    ```
 
 7. 显示行号：
+
    ```
    tail -n +1 file.txt
    ```
@@ -263,52 +305,63 @@ tail [options] file
 `dig` 是一个用于查询 DNS（Domain Name System）信息的命令行工具，它在 Unix 和 Linux 系统中广泛使用。通过 `dig` 命令，你可以查找域名的 IP 地址、查询 DNS 记录、解析域名等。
 
 **基本语法：**
+
 ```
 dig [options] domain_name
 ```
 
 **使用示例：**
+
 1. 查询域名的 A 记录（IPv4 地址）：
+
    ```
    dig example.com
    ```
 
 2. 查询域名的 AAAA 记录（IPv6 地址）：
+
    ```
    dig AAAA example.com
    ```
 
 3. 查询域名的 MX 记录（邮件交换服务器）：
+
    ```
    dig MX example.com
    ```
 
 4. 查询域名的 CNAME 记录（别名记录）：
+
    ```
    dig CNAME www.example.com
    ```
 
 5. 查询域名的 NS 记录（域名服务器）：
+
    ```
    dig NS example.com
    ```
 
 6. 查询域名的 TXT 记录（文本记录）：
+
    ```
    dig TXT example.com
    ```
 
 7. 查询域名的 SOA 记录（授权记录）：
+
    ```
    dig SOA example.com
    ```
 
 8. 指定查询的 DNS 服务器：
+
    ```
    dig @dns_server_ip example.com
    ```
 
 9. 显示详细信息：
+
    ```
    dig +nocmd example.com any +multiline +noall +answer
    ```
@@ -322,54 +375,66 @@ dig [options] domain_name
 `curl` 是另一个常用的命令行工具，用于与 Web 服务器进行数据交互，支持多种协议。它可以用于下载文件、发送 HTTP 请求、测试接口、获取网页内容等任务。下面是 `curl` 命令的基本用法：
 
 1. **基本语法：**
+
    ```
    curl [options] [URL]
    ```
+
    - `options` 是一些可选参数，用于配置 `curl` 命令的行为。
    - `URL` 是要请求或下载的 URL 地址。
 
 2. **使用示例：**
+
    - 发送 HTTP GET 请求：
+
      ```
      curl http://example.com/api/data
      ```
 
    - 发送 HTTP POST 请求（包含数据）：
+
      ```
      curl -X POST -d "username=user&password=pass" http://example.com/login
      ```
 
    - 下载文件：
+
      ```
      curl -O http://example.com/file.txt
      ```
 
    - 将下载的文件保存为指定的文件名：
+
      ```
      curl -o output.txt http://example.com/file.txt
      ```
 
    - 断点续传（如果下载中断，下次继续下载）：
+
      ```
      curl -C - -o output.txt http://example.com/file.txt
      ```
 
    - 限速下载（限制下载速度）：
+
      ```
      curl --limit-rate 100k -o output.txt http://example.com/file.txt
      ```
 
    - 忽略证书检查（适用于自签名证书等情况）：
+
      ```
      curl --insecure https://example.com/secure-data
      ```
 
    - 发送自定义请求头：
+
      ```
      curl -H "Authorization: Bearer TOKEN" http://example.com/api/data
      ```
 
    - 下载时显示详细信息：
+
      ```
      curl -v http://example.com/file.txt
      ```
@@ -383,54 +448,66 @@ dig [options] domain_name
 `wget` 是一个常用的命令行工具，用于从 Web 上下载文件。它在 Unix 和 Linux 系统中经常用于下载文件、镜像站点等任务。下面是 `wget` 命令的基本用法：
 
 1. **基本语法：**
+
    ```
    wget [options] [URL]
    ```
+
    - `options` 是一些可选参数，用于配置 `wget` 命令的行为。
    - `URL` 是要下载的文件的网址或链接。
 
 2. **使用示例：**
+
    - 下载文件：
+
      ```
      wget http://example.com/file.txt
      ```
 
    - 将下载的文件保存到指定的文件名：
+
      ```
      wget -O output.txt http://example.com/file.txt
      ```
 
    - 后台下载（在后台运行，不阻塞终端）：
+
      ```
      wget -b http://example.com/file.txt
      ```
 
    - 断点续传（如果下载中断，下次继续下载）：
+
      ```
      wget -c http://example.com/file.txt
      ```
 
    - 限速下载（限制下载速度）：
+
      ```
      wget --limit-rate=100k http://example.com/file.txt
      ```
 
    - 下载多个文件（使用通配符）：
+
      ```
      wget http://example.com/files/{file1.txt,file2.txt}
      ```
 
    - 从文件中读取 URL 进行批量下载：
+
      ```
      wget -i urls.txt
      ```
 
    - 忽略证书检查（适用于自签名证书等情况）：
+
      ```
      wget --no-check-certificate http://example.com/file.txt
      ```
 
    - 下载时显示详细信息：
+
      ```
      wget --verbose http://example.com/file.txt
      ```
@@ -445,51 +522,61 @@ SED（Stream Editor）是一种流式文本编辑工具，它在 Unix 和 Linux 
 
 1. **基本语法：**
    SED 的基本语法为：
+
    ```
    sed [options] 'command' input_file
    ```
+
    - `options` 是一些可选参数，用于配置 SED 的行为。
    - `command` 是一个编辑命令，用于指定对文本进行的操作。
    - `input_file` 是输入文件的名称。
 
 2. **使用示例：**
    假设我们有一个文本文件 `data.txt` 包含以下内容：
+
    ```
    Hello, World!
    This is a test file.
    ```
 
    - 将文件内容打印到终端：
+
      ```
      sed 'p' data.txt
      ```
 
    - 替换文件中的文本：
+
      ```
      sed 's/Hello/Hi/' data.txt
      ```
 
    - 仅打印包含 "test" 的行：
+
      ```
      sed '/test/p' data.txt
      ```
 
    - 删除空行：
+
      ```
      sed '/^$/d' data.txt
      ```
 
    - 使用正则表达式进行替换（全局替换）：
+
      ```
      sed 's/this/that/g' data.txt
      ```
 
    - 使用多个编辑命令：
+
      ```
      sed -e 's/Hello/Hi/' -e '/test/p' data.txt
      ```
 
    - 将修改写入新文件，保留原文件不变：
+
      ```
      sed 's/Hello/Hi/' data.txt > new_data.txt
      ```
@@ -507,15 +594,18 @@ AWK 是一种强大的文本处理工具，它在 Unix 和 Linux 系统中广泛
 
 1. **基本语法：**
    AWK 的基本语法为：
+
    ```
    awk 'pattern { action }' input_file
    ```
+
    - `pattern` 是一个模式，用于匹配文本中的行。
    - `action` 是一个动作，指定了在匹配到模式的行上要执行的操作。
    - `input_file` 是输入文件的名称。
 
 2. **使用示例：**
    假设我们有一个文本文件 `data.txt` 包含以下内容：
+
    ```
    Alice 25
    Bob 30
@@ -523,31 +613,37 @@ AWK 是一种强大的文本处理工具，它在 Unix 和 Linux 系统中广泛
    ```
 
    - 打印文件中的每一行：
+
      ```
      awk '{ print }' data.txt
      ```
 
    - 打印第一列（名字）：
+
      ```
      awk '{ print $1 }' data.txt
      ```
 
    - 计算年龄总和：
+
      ```
      awk '{ sum += $2 } END { print "Total Age:", sum }' data.txt
      ```
 
    - 仅打印年龄大于 25 的行：
+
      ```
      awk '$2 > 25 { print }' data.txt
      ```
 
    - 自定义输出分隔符（逗号）：
+
      ```
      awk '{ print $1, ",", $2 }' data.txt
      ```
 
    - 计算年龄平均值：
+
      ```
      awk '{ sum += $2 } END { avg = sum / NR; print "Average Age:", avg }' data.txt
      ```
@@ -564,6 +660,7 @@ AWK 支持丰富的内置函数、条件语句和循环，使得它可以处理�
 `grep` 是一个在 Unix 和 Linux 系统中常用的命令行工具，用于在文本文件中搜索指定的模式（字符串）。`grep` 命令可以通过正则表达式匹配来查找符合条件的行，并将匹配的结果输出到屏幕上或保存到文件中。
 
 **基本语法：**
+
 ```
 grep [options] pattern [file...]
 ```
@@ -572,42 +669,51 @@ grep [options] pattern [file...]
 - `file` 是要在其中搜索的文件名。如果不指定文件名，则 `grep` 默认从标准输入中读取数据。
 
 **使用示例：**
+
 1. 在文件中搜索特定字符串：
+
    ```
    grep "search_string" file.txt
    ```
 
 2. 搜索文件中匹配正则表达式的内容：
+
    ```
    grep -E "pattern" file.txt
    ```
 
 3. 忽略大小写搜索：
+
    ```
    grep -i "pattern" file.txt
    ```
 
 4. 统计匹配的行数：
+
    ```
    grep -c "pattern" file.txt
    ```
 
 5. 输出匹配的行号：
+
    ```
    grep -n "pattern" file.txt
    ```
 
 6. 递归搜索目录下的所有文件：
+
    ```
    grep "pattern" -r /path/to/directory
    ```
 
 7. 排除匹配的行：
+
    ```
    grep -v "pattern" file.txt
    ```
 
 8. 从标准输入读取数据进行搜索：
+
    ```
    cat file.txt | grep "pattern"
    ```
@@ -621,6 +727,7 @@ grep [options] pattern [file...]
 `kill` 是一个在 Unix 和 Linux 系统中常用的命令行工具，用于终止或发送信号给进程。每个运行在操作系统上的进程都有一个唯一的进程ID（PID），通过 `kill` 命令可以使用进程ID来终止或与进程通信。
 
 **基本语法：**
+
 ```
 kill [options] PID
 ```
@@ -628,37 +735,45 @@ kill [options] PID
 - `PID` 是要操作的进程ID。
 
 **使用示例：**
+
 1. 终止指定进程：
+
    ```
    kill PID
    ```
 
 2. 终止指定进程（使用强制模式，类似于 `kill -9`）：
+
    ```
    kill -SIGKILL PID
    ```
 
 3. 发送终止信号给指定进程：
+
    ```
    kill -SIGTERM PID
    ```
 
 4. 发送指定信号给进程：
+
    ```
    kill -SIGNAL PID
    ```
 
 5. 查看当前正在运行的进程及其进程ID：
+
    ```
    ps aux
    ```
 
 6. 终止多个进程：
+
    ```
    kill PID1 PID2 PID3 ...
    ```
 
 7. 终止指定进程组：
+
    ```
    kill -SIGTERM -PID
    ```
