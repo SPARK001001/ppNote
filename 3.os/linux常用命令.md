@@ -653,7 +653,41 @@ AWK 是一种强大的文本处理工具，它在 Unix 和 Linux 系统中广泛
 
 AWK 支持丰富的内置函数、条件语句和循环，使得它可以处理各种复杂的文本处理任务。要深入学习 AWK，你可以查阅 AWK 的官方文档和教程，掌握更多高级用法和技巧。
 
+- 一个程序关闭脚本
 
+  - ```
+    #!/bin/sh
+    
+    echo "[INFO]************begin kill crm-smart-ranking-service-center"
+    process_id=`ps -ef | grep marketing-business-service.jar |grep -v grep | awk -F ' ' '{print $2}'`
+    echo $process_id
+    kill -9 $process_id
+    echo "[INFO]************crm-smart-ranking-service-center kill successfully"
+    ```
+
+- 其中：	
+
+   - ps -ef | grep .. 找运行的程序
+    - grep -v grep ： 排除包含grep的行
+    - awk -F ' ' '{print $2}':对该行以空格分割，并取第二个 
+
+- 一个程序启动脚本
+
+  - ```
+    #!/bin/sh
+    echo "[INFO]************begin start marketing-business-service "
+    #nohup java -jar marketing-business-service.jar --spring.profiles.active=crm-test > ./nohup.log  2>&1 &
+    nohup java -jar ./marketing-business-service.jar  -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=./../logs/marketing-business-service/$1-heapdump.hprof  --spring.profiles.active=crm-test --spring.cloud.nacos.config.server-addr=nacos-dev.tangees.com:80 --spring.cloud.nacos.config.username=nacos --spring.cloud.nacos.config.password=tungee0418 --spring.cloud.nacos.config.context-path=/nacos > ./nohup.log  2>&1 &
+    sleep 2
+    echo "[INFO]************marketing-business-service start successfully"
+    
+    ```
+
+  - 其中 
+  
+    - nohup 表示终端关闭后继续在后台运行
+    - `> ./nohup.log 2>&1 $`: 表示将标准错误输出和标准输出 重定向到文件nohup.log
+    - 末尾添加 & ：表示命令会在后台运行，并且终端会立即返回到命令行提示符，你可以继续输入其他命令。终端关闭后会停止。
 
 # grep 
 
