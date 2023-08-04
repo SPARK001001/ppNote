@@ -8,7 +8,9 @@ git 是一种开源分布式版本控制系统，用于跟踪和管理代码的�
 
   - 合并分支：
 
-      -  git merge : 用于将**其他**分支的修改合并到当前分支，并保留各分支的提交历史，产生合并提交
+      - git merge : 用于将**其他**分支的修改合并到当前分支，并保留各分支的提交历史，产生合并提交
+
+           -  git merge --squash ftr_p: 合并其他分支，但不保留其他分支的提交记录。需要commit来提交新记录
 
       - git rebase: 用于将其他分支的修改提交历史应用到当前分支上，将分支合并成一条直线，保持提交历史的间接和连续性。不产生新的提交
 
@@ -44,6 +46,7 @@ git 是一种开源分布式版本控制系统，用于跟踪和管理代码的�
   - 轻量标签( lightweight tags)： git tag v1.0.0
   - 附注标签 （annotated tage）： git tag v.1.0.0 -m "tag message"
 - git tag ： 列出所有标签
+  
   - git show v1.0.0: 查看附注标签的详情
   
 - 其他：
@@ -51,3 +54,4 @@ git 是一种开源分布式版本控制系统，用于跟踪和管理代码的�
      - 丢弃当前本地的修改： git reset --hard
      - 删除分支test：先切换到其他分支。在 git branch -d test。 或-D 强制删除
      - 删除远程分支origin/test: git push origin --delete test
+     - git diff: 比较当前工作区和暂存区的差别，也即是提交和未提交的区别; git diff commit1 commit2,比较两提交之间的差别； git diff dev, 比较当前分支与dev分支的区别
