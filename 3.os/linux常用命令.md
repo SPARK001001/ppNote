@@ -825,3 +825,236 @@ kill [options] PID
 
 - 查看当前文件夹文件占用情况
 
+# scp
+
+- `scp` 是 Linux 下的一个命令行工具，用于在本地主机和远程主机之间进行文件的复制和传输。它支持通过 SSH 协议进行安全的文件传输。下面是一些常见的 `scp` 命令用法示例：
+
+  1. **从本地主机复制文件到远程主机**：
+
+     ```
+     scp local_file remote_username@remote_host:remote_folder/
+     ```
+
+     例如：
+
+     ```
+     scp file.txt user@remotehost:/remote/folder/
+     ```
+
+  2. **从远程主机复制文件到本地主机**：
+
+     ```
+     scp remote_username@remote_host:remote_file local_folder/
+     ```
+
+     例如：
+
+     ```
+     scp user@remotehost:/remote/file.txt /local/folder/
+     ```
+
+  3. **从本地主机复制文件夹到远程主机**：
+
+     ```
+     scp -r local_folder remote_username@remote_host:remote_folder/
+     ```
+
+     例如：
+
+     ```
+     scp -r myfolder user@remotehost:/remote/
+     ```
+
+  4. **从远程主机复制文件夹到本地主机**：
+
+     ```
+     scp -r remote_username@remote_host:remote_folder local_folder/
+     ```
+
+     例如：
+
+     ```
+     scp -r user@remotehost:/remote/myfolder /local/
+     ```
+
+  5. **指定端口号**：
+
+     如果远程主机使用非默认的 SSH 端口号，你可以使用 `-P` 参数来指定端口号。
+
+     ```
+     scp -P port_number local_file remote_username@remote_host:remote_folder/
+     ```
+
+     例如：
+
+     ```
+     scp -P 2222 file.txt user@remotehost:/remote/folder/
+     ```
+
+  `scp` 命令类似于 `cp` 命令，但它允许你在本地主机和远程主机之间传输文件。请注意，`scp` 命令会要求输入密码或使用密钥进行身份验证，确保你有权限访问远程主机。如果你经常需要进行文件传输，考虑设置 SSH 密钥对以提高安全性和便利性。
+
+# rpm
+
+- 在 Linux 系统中，`rpm` 是一个命令行工具，用于管理 RPM（Red Hat Package Manager）软件包。RPM 是一种常见的软件包管理格式，用于在基于 Red Hat 系统的发行版（如 CentOS、Fedora）中安装、升级、查询和删除软件包。以下是一些常见的 `rpm` 命令用法示例：
+
+  1. **安装软件包**：
+
+     ```
+     rpm -i package.rpm
+     ```
+
+     例如：
+
+     ```
+     rpm -i package.rpm
+     ```
+
+  2. **升级软件包**：
+
+     ```
+     rpm -U package.rpm
+     ```
+
+     例如：
+
+     ```
+     rpm -U package.rpm
+     ```
+
+  3. **卸载软件包**：
+
+     ```
+     rpm -e package_name
+     ```
+
+     例如：
+
+     ```
+     rpm -e package_name
+     ```
+
+  4. **查询已安装的软件包**：
+
+     ```
+     rpm -q package_name
+     ```
+
+     例如：
+
+     ```
+     rpm -q bash
+     ```
+
+  5. **列出所有已安装的软件包**：
+
+     ```
+     rpm -qa
+     ```
+
+     例如：
+
+     ```
+     rpm -qa
+     ```
+
+  6. **查询软件包信息**：
+
+     ```
+     rpm -qi package_name
+     ```
+
+     例如：
+
+     ```
+     rpm -qi bash
+     ```
+
+  7. **查询软件包文件列表**：
+
+     ```
+     rpm -ql package_name
+     ```
+
+     例如：
+
+     ```
+     rpm -ql bash
+     ```
+
+  8. **查询软件包所属的文件**：
+
+     ```
+     rpm -qf /path/to/file
+     ```
+
+     例如：
+
+     ```
+     rpm -qf /usr/bin/bash
+     ```
+
+  这些命令只是 `rpm` 命令的一部分。`rpm` 命令可以帮助你管理系统上的软件包，包括安装、升级、卸载等操作。请注意，`rpm` 通常用于 Red Hat 系统及其衍生版本。对于其他发行版，可能使用不同的包管理工具（如 Debian 的 `dpkg`）。
+
+# tar 
+
+- `tar` 是一个在 Linux 和类 Unix 系统中用于创建、查看和提取归档文件的命令行工具。归档文件可以包含多个文件和目录，并可以被压缩以减小文件大小。以下是一些常用的 `tar` 命令选项和用法：
+
+  1. **创建归档文件**：
+
+     ```
+     tar -cvf archive.tar file1 file2 directory/
+     ```
+
+     在这个例子中，`-c` 表示创建归档，`-v` 表示显示详细信息，`-f` 后面跟着归档文件的名称。你可以在命令中指定要包含在归档文件中的文件和目录。
+
+  2. **查看归档文件内容**：
+
+     ```
+     tar -tvf archive.tar
+     ```
+
+     这个命令会列出归档文件 `archive.tar` 中包含的文件和目录。`-t` 表示查看归档内容，`-v` 表示显示详细信息，`-f` 后面跟着归档文件的名称。
+
+  3. **提取归档文件内容**：
+
+     ```
+     tar -xvf archive.tar
+     ```
+
+     这个命令会将归档文件 `archive.tar` 中的内容提取到当前目录下。`-x` 表示提取（解包），`-v` 表示显示详细信息，`-f` 后面跟着归档文件的名称。
+
+  4. **压缩归档文件**：
+
+     ```
+     tar -czvf archive.tar.gz directory/
+     ```
+
+     这个命令会创建一个包含 `directory/` 目录中内容的 `.tar.gz` 归档文件。`-c` 表示创建归档，`-z` 表示使用 gzip 压缩，`-v` 表示显示详细信息，`-f` 后面跟着归档文件的名称。
+
+  5. **解压缩压缩的归档文件**：
+
+     ```
+     tar -xzvf archive.tar.gz
+     ```
+
+     这个命令会将 `.tar.gz` 归档文件解压缩，并将其中的内容提取到当前目录下。`-x` 表示提取（解包），`-z` 表示使用 gzip 解压缩，`-v` 表示显示详细信息，`-f` 后面跟着归档文件的名称。
+
+  `tar` 命令有许多选项，用于控制其行为。你可以使用 `man tar` 命令查看完整的 `tar` 命令文档，以了解更多选项和用法。
+
+  - `tar -xJvf` 是用于解压缩一个 `.tar.xz` 压缩文件的命令。这个命令会解压缩 `.tar.xz` 文件，并将其中的内容提取出来。让我为你解释这个命令的各个部分的含义：
+
+    - `tar`: 是一个用于创建和提取归档文件的命令行工具。
+    - `-x`: 表示解压缩（提取），将归档文件中的内容提取出来。
+    - `-J`: 表示使用 `xz` 压缩格式。`.tar.xz` 文件使用 `xz` 压缩。
+    - `-v`: 表示显示操作详细信息。
+    - `-f`: 后面跟着需要操作的文件名。
+
+    如果你要解压缩一个 `.tar.xz` 文件，你需要在 `-f` 后面提供该文件的路径。同时，你可以通过 `-C` 选项指定要提取到的目标路径。例如：
+
+    ```bash
+    tar -xJvf my_archive.tar.xz -C /target/directory/
+    ```
+
+    这个命令会将 `my_archive.tar.xz` 文件中的内容解压缩到 `/target/directory/` 目录下。注意，`-C` 后面是目标路径，最后没有斜杠（`/`）。
+
+    请确保在执行该命令之前，你有足够的权限来读取压缩文件，并且目标路径存在。
