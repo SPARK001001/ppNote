@@ -1,0 +1,196 @@
+{
+  "main": {
+    "id": "69953773a5ec930a",
+    "type": "split",
+    "children": [
+      {
+        "id": "2741807ac5c3f4fc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "21b49f787bff659f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "0.network/TCP.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "28c7e8948c82ec7a",
+    "type": "split",
+    "children": [
+      {
+        "id": "4e34a1aa2b7113c4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4fa23899f80e8c3e",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "93b89bb3799db89f",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "19d460dbd61d69c1",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "0e52e1aadaa42bae",
+    "type": "split",
+    "children": [
+      {
+        "id": "d775af8a692d7bd3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3ca30417f89a9cdc",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "0.network/TCP.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "7b828876a7897fab",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "0.network/TCP.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b799f504d7a6ec1d",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "c2b4deba1d18d750",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "0.network/TCP.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "21b49f787bff659f",
+  "lastOpenFiles": [
+    "3.os/零拷贝mmap&sendfile.md",
+    "3.os/img/641.png",
+    "3.os/img/640.png",
+    "3.os/img",
+    "20.reading note/img/c70e9b069ec647499f9dc225b7feed1b.jpg",
+    "20.reading note/img",
+    "20.reading note/geek-程序员是如何思考的.md",
+    "12. message brokers/rocketMq/img/9.png",
+    "12. message brokers/rocketMq/img/8.png",
+    "12. message brokers/rocketMq/img/7.png",
+    "12. message brokers/rocketMq/img/6.png",
+    "12. message brokers/rocketMq/img/5.png",
+    "12. message brokers/rocketMq/img/4.png",
+    "12. message brokers/rocketMq/img/2.png",
+    "12. message brokers/rocketMq/rocketmq.md",
+    "12. message brokers/rocketMq/img",
+    "12. message brokers/rocketMq",
+    "1.lanugage/java/web开发框架/spring常用扩展点.md",
+    "1.lanugage/java/web开发框架/spring启动核心步骤.md",
+    "1.lanugage/java/web开发框架/spring9大核心功能.md",
+    "1.lanugage/java/web开发框架/img/qrcode",
+    "1.lanugage/java/web开发框架/img/300",
+    "1.lanugage/java/web开发框架/img",
+    "0.network/6.什么是hosting.md",
+    "0.network/5.什么是域名.md",
+    "0.network/4.dns是如何工作的.md",
+    "0.network/3.浏览器是如何工作的.md",
+    "0.network/2.what is http.md",
+    "0.network/TCP.md",
+    "0.network/1.internet是怎么工作的.md",
+    "README.md",
+    "10.sofware design & architecture/设计模式/README.md",
+    "9.CICD/ci&cd工作流程设计.md",
+    "9.CICD/自动化构建工具.md",
+    "9.CICD/自动化部署和环境管理.md",
+    "9.CICD/概念.md",
+    "8.testing/集成测试.md",
+    "8.testing/功能测试.md",
+    "8.testing/概念.md",
+    "8.testing/单元测试.md",
+    "7.web security/api security best practice.md",
+    "6.caching/server side.md",
+    "6.caching/readme.md"
+  ]
+}
