@@ -1114,3 +1114,76 @@ kill [options] PID
   使用 `crontab` 需要小心，确保任务的时间表和命令都正确设置，以免不必要的问题。如果您不熟悉 cron 表达式的格式，可以使用在线 cron 表达式生成器来帮助您创建正确的时间表。
   
   - `crontab -e` 命令用于编辑当前用户的 crontab 任务，一旦您编辑并保存任务，它们将会在预定的时间自动运行，不需要手动启动。
+
+# 系统常用命令
+
+1、linux CPU信息：cat /proc/cpuinfo
+
+2、linux内存信息：cat /proc/meminfo         内存大小：cat /proc/meminfo |grep MemTotal
+
+3、硬盘信息：fdisk -l 
+
+4、查看内核/操作系统/CPU信息的linux系统信息命令： uname -a
+
+5、查看操作系统版本：cat /etc/redhat -release
+
+6、查看计算机名的linux系统信息命令：hostname
+
+7、列出加载的内核模块：lsmod
+
+8、查看环境变量资源：env
+
+9、查看内存使用量和交换区使用量：free -m
+
+10、查看各分区使用情况：df -h
+
+11、看指定目录的大小：du -sh
+
+12、查看系统运行时间、用户数、负载：uptime
+
+13、查看系统负载磁盘和分区：cat /proc/loadavg
+
+14、查看挂接的分区状态：mount | column -t
+
+15、查看所有分区：fdisk -l
+
+16、查看所有网络接口的属性:ifconfig
+
+17、查看防火墙设置: iptables -L
+
+18、查看路由表: route -n
+
+19、查看所有监听端口:netstat -lntp
+
+20、查看所有已经建立的连接:netstat -antp
+
+21、查看网络统计信息进程:netstat -s
+
+22、查看所有进程:ps -ef
+
+23、实时显示进程状态用户:top
+
+24、查看活动用户:w
+
+25、查看指定用户信息:id
+
+26、 查看用户登录日志:last
+
+27、查看当前用户的计划任务服务:crontab -l
+
+28、chkconfig –list # 列出所有系统服务
+
+29、chkconfig –list | grep on # 列出所有启动的系统服务程序
+
+30、rpm -qa # 查看所有安装的软件包
+
+31、cat /proc/partitions ：查看linux硬盘和分区信息的系统信息命令
+
+32、cat /proc/meminfo ：查看linux系统内存信息的linux系统命令
+
+33、cat /proc/version ：查看版本，类似uname -r
+
+34、cat /proc/ioports ：查看设备io端口
+35、cat /proc/interrupts ：查看中断
+36、cat /proc/pci ：查看pci设备的信息
+37、cat /proc/swaps ：查看所有swap分区的信息
